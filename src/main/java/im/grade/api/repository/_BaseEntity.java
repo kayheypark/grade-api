@@ -1,6 +1,7 @@
 package im.grade.api.repository;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -13,7 +14,8 @@ public class _BaseEntity {
     private Long idx;
 //    @GeneratedValue(generator = "uuid2")
 //    @GenericGenerator(name="uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "VARCHAR(36) DEFAULT (UUID())")
+    @ColumnDefault(value = "'UUID()'")
+    @Column(columnDefinition = "VARCHAR(36)")
     private UUID id;
 
     @Column(columnDefinition = "VARCHAR(36)")

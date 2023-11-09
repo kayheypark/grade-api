@@ -3,6 +3,8 @@ package im.grade.api.repository;
 import im.grade.api.type.MemberType;
 import im.grade.api.type.UserGrade;
 import jakarta.persistence.*;
+import org.apache.catalina.User;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.time.LocalDateTime;
 
@@ -11,19 +13,23 @@ import java.time.LocalDateTime;
 @Table(name = "tbl_member")
 public class Member extends _BaseEntity {
 
-    @Column(columnDefinition = "VARCHAR(10) DEFAULT 'ko_KR'")
+    @Column(columnDefinition = "VARCHAR(10)")
+    @ColumnDefault("'ko_KR'")
     private String locale;
 
     @Enumerated(EnumType.STRING)
+    @ColumnDefault(value = "'USER'")
     @Column(nullable = false)
-    private MemberType memberType;
+    private MemberType memberType = MemberType.USER;
 
     @Enumerated(EnumType.STRING)
+    @ColumnDefault(value = "'D'")
     @Column(nullable = false)
-    private UserGrade grade;
+    private UserGrade grade = UserGrade.D;
 
-    @Column(nullable = false, columnDefinition = "DECIMAL(14,4) DEFAULT 0")
-    private double point;
+    @ColumnDefault(value = "0")
+    @Column(nullable = false, columnDefinition = "DECIMAL(14,4)")
+    private double point = 0;
 
     @Column(nullable = false)
     private String email;
