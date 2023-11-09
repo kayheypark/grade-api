@@ -1,9 +1,8 @@
 package im.grade.api.repository;
 
 import im.grade.api.type.MemberType;
-import im.grade.api.type.UserGrade;
+import im.grade.api.type.UserGradeType;
 import jakarta.persistence.*;
-import org.apache.catalina.User;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.time.LocalDateTime;
@@ -11,7 +10,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tbl_member")
-public class Member extends _BaseEntity {
+public class MemberEntity extends _BaseEntity {
 
     @Column(columnDefinition = "VARCHAR(10)")
     @ColumnDefault("'ko_KR'")
@@ -25,7 +24,7 @@ public class Member extends _BaseEntity {
     @Enumerated(EnumType.STRING)
     @ColumnDefault(value = "'D'")
     @Column(nullable = false)
-    private UserGrade grade = UserGrade.D;
+    private UserGradeType grade = UserGradeType.D;
 
     @ColumnDefault(value = "0")
     @Column(nullable = false, columnDefinition = "DECIMAL(14,4)")

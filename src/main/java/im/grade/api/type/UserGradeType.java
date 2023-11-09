@@ -1,6 +1,6 @@
 package im.grade.api.type;
 
-public enum UserGrade {
+public enum UserGradeType {
     X,
     S,
     A,

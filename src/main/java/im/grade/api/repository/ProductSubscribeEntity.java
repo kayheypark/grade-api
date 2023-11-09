@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "tbl_product_subscribe")
-public class ProductSubscribe extends _BaseEntity {
+public class ProductSubscribeEntity extends _BaseEntity {
     @Column(nullable = false, columnDefinition = "VARCHAR(36)")
     private UUID productId;
 

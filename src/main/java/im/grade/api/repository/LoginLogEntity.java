@@ -1,10 +1,11 @@
 package im.grade.api.repository;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tbl_media_bookmark_log")
-public class MediaBookmarkLog extends _LikeLogBaseEntity {
+@Table(name = "tbl_login_log")
+public class LoginLogEntity extends _LogBaseEntity {
 
 }

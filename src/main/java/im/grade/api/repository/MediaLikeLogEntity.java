@@ -6,6 +6,6 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tbl_media_like_log")
-public class MediaLikeLog extends _LikeLogBaseEntity {
+public class MediaLikeLogEntity extends _LikeLogBaseEntity {
 
 }

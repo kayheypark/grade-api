@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "tbl_product")
-public class Product extends _BoardBaseEntity {
+public class ProductEntity extends _BoardBaseEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

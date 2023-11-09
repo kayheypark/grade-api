@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "tbl_payment_log")
-public class PaymentLog extends _LogBaseEntity {
+public class PaymentLogEntity extends _LogBaseEntity {
     @Column(nullable = false)
     private String pg;
 

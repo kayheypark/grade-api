@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "tbl_comment")
-public class Comment extends _BoardBaseEntity {
+public class CommentEntity extends _BoardBaseEntity {
     @Column(columnDefinition = "VARCHAR(36)")
     private UUID boardId;
 }

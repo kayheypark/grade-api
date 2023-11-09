@@ -4,8 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tbl_board_bookmark_log")
-
-public class BoradBookmarkLog extends _LikeLogBaseEntity {
+@Table(name = "tbl_board")
+public class BoardEntity extends _BoardBaseEntity {
 
 }

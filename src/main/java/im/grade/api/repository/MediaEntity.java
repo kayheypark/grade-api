@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "tbl_media")
-public class Media extends _BaseEntity {
+public class MediaEntity extends _BaseEntity {
 
     @Column(columnDefinition = "VARCHAR(36)")
     private UUID boardId;
