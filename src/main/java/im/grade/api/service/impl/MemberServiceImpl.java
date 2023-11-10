@@ -13,9 +13,7 @@ public class MemberServiceImpl implements MemberService {
     public Map<String, Object> getMemberData() {
         Map<String, Object> data = new HashMap<>();
 
-        data.put("label1", "check1");
-        data.put("label2", "check2");
-        data.put("label3", "check3");
+        data.put("email", "id@domain.com");
 
         return data;
     }
