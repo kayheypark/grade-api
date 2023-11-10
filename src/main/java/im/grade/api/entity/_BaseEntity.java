@@ -1,7 +1,6 @@
-package im.grade.api.repository;
+package im.grade.api.entity;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.time.LocalDateTime;

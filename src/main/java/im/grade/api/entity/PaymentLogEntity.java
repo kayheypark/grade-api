@@ -1,4 +1,4 @@
-package im.grade.api.repository;
+package im.grade.api.entity;
 
 import im.grade.api.type.StatusType;
 import jakarta.persistence.*;

@@ -1,4 +1,4 @@
-package im.grade.api.repository;
+package im.grade.api.entity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
