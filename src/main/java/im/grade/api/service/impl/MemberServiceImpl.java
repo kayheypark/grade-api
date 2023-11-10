@@ -1,13 +1,13 @@
 package im.grade.api.service.impl;
 
-import im.grade.api.service.memberService;
+import im.grade.api.service.MemberService;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
 import java.util.HashMap;
 
 @Service
-public class memberServiceImpl implements memberService {
+public class MemberServiceImpl implements MemberService {
 
     @Override
     public Map<String, Object> getMemberData() {
