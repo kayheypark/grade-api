@@ -2,6 +2,7 @@ package im.grade.api.repository;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.GenericGenerator;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -10,14 +11,10 @@ import java.util.UUID;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) // 상속 구현 전략 선택
 public class _BaseEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idx;
-//    @GeneratedValue(generator = "uuid2")
-//    @GenericGenerator(name="uuid2", strategy = "uuid2")
-    @ColumnDefault(value = "'UUID()'")
-    @Column(columnDefinition = "VARCHAR(36)")
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(columnDefinition = "VARCHAR(36) DEFAULT (UUID())")
     private UUID id;
-
     @Column(columnDefinition = "VARCHAR(36)")
     private UUID parentId;
 
