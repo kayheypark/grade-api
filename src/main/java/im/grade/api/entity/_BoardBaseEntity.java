@@ -2,9 +2,12 @@ package im.grade.api.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.UUID;
-
+@Getter
+@Setter
 @MappedSuperclass
 public class _BoardBaseEntity extends _BaseEntity {
     @Column(length = 15)

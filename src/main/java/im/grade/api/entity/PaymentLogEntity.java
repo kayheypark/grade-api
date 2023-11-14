@@ -2,7 +2,11 @@ package im.grade.api.entity;
 
 import im.grade.api.type.StatusType;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "tbl_payment_log")
 public class PaymentLogEntity extends _LogBaseEntity {

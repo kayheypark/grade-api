@@ -2,9 +2,12 @@ package im.grade.api.entity;
 
 import im.grade.api.type.PlatformType;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.UUID;
-
+@Getter
+@Setter
 @MappedSuperclass
 public class _LogBaseEntity extends _BaseEntity {
 

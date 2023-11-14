@@ -3,10 +3,13 @@ package im.grade.api.entity;
 
 import im.grade.api.type.UserGradeType;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.UUID;
 
-
+@Getter
+@Setter
 @Entity
 @Table(name = "tbl_board_category")
 public class BoardCategoryEntity extends _CategoryBaseEntity {

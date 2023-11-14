@@ -3,11 +3,14 @@ package im.grade.api.entity;
 import im.grade.api.type.MemberType;
 import im.grade.api.type.UserGradeType;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.time.LocalDateTime;
 
-
+@Getter
+@Setter
 @Entity
 @Table(name = "tbl_member")
 public class MemberEntity extends _BaseEntity {
