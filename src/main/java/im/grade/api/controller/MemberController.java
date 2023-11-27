@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/v1/member")
@@ -19,9 +18,11 @@ public class MemberController {
     private final MemberService memberService;
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Map<String, List<MemberEntity>>> getEmailById(@PathVariable(value="id") UUID id) {
-        Map<String, List<MemberEntity>> data = memberService.findEmailById(id);
+    public ResponseEntity<Map<String, List<MemberEntity>>> getMemberById(@PathVariable(value="id") String id) {
+        Map<String, List<MemberEntity>> data = memberService.findMemberById(id);
         return ResponseEntity.status(HttpStatus.OK).body(data);
     }
+
+
 
 }

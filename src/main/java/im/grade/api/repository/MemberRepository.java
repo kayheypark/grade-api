@@ -6,11 +6,11 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
-import java.util.UUID;
 
-public interface MemberRepository extends JpaRepository<MemberEntity, UUID> {
-    @Query("SELECT m FROM MemberEntity m")
-    List<MemberEntity> findEmailById(
-            @Param("id") UUID id
+public interface MemberRepository extends JpaRepository<MemberEntity, String> {
+//    @Query(value = "SELECT email FROM tbl_member WHERE id = '9f44e6a6-7fc9-11ee-93f8-4d1ba1d54af1'", nativeQuery = true)
+    @Query(value = "SELECT m.* FROM tbl_member m WHERE id = :id", nativeQuery = true)
+    List<MemberEntity> findMemberById(
+            @Param("id") String id
     );
 }

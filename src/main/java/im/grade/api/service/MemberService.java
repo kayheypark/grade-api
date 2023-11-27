@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 @Service
 public class MemberService {
@@ -19,9 +18,9 @@ public class MemberService {
             this.memberRepository = memberRepository;
         }
 
-        public Map<String, List<MemberEntity>> findEmailById(UUID id) {
+        public Map<String, List<MemberEntity>> findMemberById(String id) {
             Map<String, List<MemberEntity>> data = new HashMap<String, List<MemberEntity>>();
-            data.put("data", memberRepository.findEmailById(id));
+            data.put("data", memberRepository.findMemberById(id));
             return data;
         }
 }

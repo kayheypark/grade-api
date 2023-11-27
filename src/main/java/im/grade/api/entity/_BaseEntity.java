@@ -15,13 +15,14 @@ public class _BaseEntity {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "VARCHAR(36) DEFAULT (UUID())")
-    private UUID id;
-    @Column(columnDefinition = "VARCHAR(36)")
-    private UUID parentId;
+    @Column(name = "id", columnDefinition = "VARCHAR(36) DEFAULT (UUID())")
+    private String id;
 
     @Column(columnDefinition = "VARCHAR(36)")
-    private UUID mapId;
+    private String parentId;
+
+    @Column(columnDefinition = "VARCHAR(36)")
+    private String mapId;
 
     @Column(columnDefinition = "TIMESTAMP")
     private LocalDateTime startAt;
